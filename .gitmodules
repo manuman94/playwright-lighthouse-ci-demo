@@ -1,0 +1,3 @@
+[submodule "vendor/playwright-lighthouse"]
+	path = vendor/playwright-lighthouse
+	url = https://github.com/manuman94/playwright-lighthouse.git

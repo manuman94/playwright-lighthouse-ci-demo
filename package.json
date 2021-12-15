@@ -1,0 +1,16 @@
+{
+  "name": "playwright-lighthouse-ci-demo",
+  "version": "1.0.0",
+  "description": "Lighthouse report for CIs running Lighthouse reports",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/jasmine/bin/jasmine.js"
+  },
+  "author": "José Manuel Blasco Galdón (jm_bg@hotmail.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jasmine": "^3.10.2",
+    "jasmine": "^3.10.0",
+    "playwright": "^1.17.1"
+  }
+}
