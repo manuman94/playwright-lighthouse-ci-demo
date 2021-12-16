@@ -9,8 +9,12 @@
   "author": "José Manuel Blasco Galdón (jm_bg@hotmail.com)",
   "license": "ISC",
   "devDependencies": {
+    "@lhci/utils": "^0.8.2",
     "@types/jasmine": "^3.10.2",
     "jasmine": "^3.10.0",
-    "playwright": "^1.17.1"
+    "lighthouse": "^9.1.0",
+    "nodegit": "^0.27.0",
+    "playwright": "^1.17.1",
+    "playwright-lighthouse": "^2.1.0"
   }
 }

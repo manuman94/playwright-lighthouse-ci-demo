@@ -1,5 +1,6 @@
 const { chromium } = require('playwright');
-const { playAudit } = require('../../vendor/playwright-lighthouse')
+const { playAudit } = require('playwright-lighthouse')
+const uploadToLhciServer = require('../../helpers/ReportHelper');
 
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 60000;
 
@@ -10,7 +11,7 @@ describe('Home Lighthouse report', () => {
         slowMo: 0,
         chromiumSandbox: false,
         args: [`--remote-debugging-port=${chromiumDebugPort}`],
-        headless: true
+        headless: false
     };
 
     it('should pass home thresholds', async () => {
@@ -30,6 +31,7 @@ describe('Home Lighthouse report', () => {
                 }
             };
             const result = await playAudit(lighthouseConfig);
+            await uploadToLhciServer(result.lhr);
             await browser.close();
         } catch (err) {
             throw new Error(err);
